@@ -1,0 +1,100 @@
+---
+title: "CrowdStrike"
+description: "Connect CrowdStrike Falcon to enable endpoint visibility and risk analysis"
+---
+
+## Prerequisites
+
+<Check>Administrator access to the CrowdStrike Falcon console</Check>
+<Check>Appropriate permissions to create API clients</Check>
+
+## Setup Instructions
+
+<Steps>
+  <Step title="Expand the navigation menu">
+    In the CrowdStrike Falcon console, click the hamburger menu icon to expand the left navigation.
+    
+    <Frame>
+      <img src="/images/integrations/crowdstrike/step-1.jpg" alt="Expand navigation menu" />
+    </Frame>
+  </Step>
+  
+  <Step title="Open Support and resources">
+    Select **Support and resources** from the bottom of the sidebar.
+    
+    <Frame>
+      <img src="/images/integrations/crowdstrike/step-2.jpg" alt="Select Support and resources" />
+    </Frame>
+  </Step>
+  
+  <Step title="Navigate to API clients and keys">
+    In the Resources and tools section, click **API clients and keys**.
+    
+    <Frame>
+      <img src="/images/integrations/crowdstrike/step-3.jpg" alt="Navigate to API clients and keys" />
+    </Frame>
+  </Step>
+  
+  <Step title="Add a new API client">
+    Click **Add new API client**.
+    
+    <Frame>
+      <img src="/images/integrations/crowdstrike/step-4.jpg" alt="Add new API client" />
+    </Frame>
+  </Step>
+  
+  <Step title="Configure the API client">
+    Enter a descriptive name (e.g., "Glow Integration") and select the following scopes:
+    
+    | Scope | Permission |
+    |-------|------------|
+    | Hosts | Read |
+    | Host Groups | Read |
+    | Assets | Read |
+    | Apps | Read |
+    | Prevention policies | Read |
+    | Zero Trust Assessment | Read |
+    | Vulnerabilities | Read |
+    | Incidents | Read |
+    | User Management | Read |
+    
+    Click **Create** to save.
+  </Step>
+  
+  <Step title="Copy your credentials">
+    A dialog will appear with your credentials. Copy and securely store:
+    - **Client ID**
+    - **Client Secret**  
+    - **Base URL**
+    
+    <Frame>
+      <img src="/images/integrations/crowdstrike/step-5.jpg" alt="API credentials dialog" />
+    </Frame>
+    
+    <Warning>
+      The Client Secret is displayed only once and cannot be retrieved later.
+    </Warning>
+  </Step>
+  
+  <Step title="Complete the integration">
+    Provide the following credentials to your Glow representative or enter them in the Glow console:
+    - Client ID
+    - Client Secret
+    - Base URL
+  </Step>
+</Steps>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="I lost my Client Secret">
+    Create a new API client in CrowdStrike and provide the new credentials to Glow.
+  </Accordion>
+  
+  <Accordion title="Which Base URL should I use?">
+    The Base URL depends on your CrowdStrike region:
+    - `https://api.crowdstrike.com` (US-1)
+    - `https://api.us-2.crowdstrike.com` (US-2)
+    - `https://api.eu-1.crowdstrike.com` (EU-1)
+  </Accordion>
+</AccordionGroup>
